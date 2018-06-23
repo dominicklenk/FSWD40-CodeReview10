@@ -18,35 +18,32 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 <head>
 <title>Welcome - <?php echo $userRow['email']; ?></title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body class="content">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <div class="collapse navbar-collapse">
     <a class="navbar-brand" href="#home.php">BigLibrary</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="#books">Books</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#cds">CD</a>
+        <a class="nav-link" href="#cds">CD's</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#dvds">DVD</a>
+        <a class="nav-link" href="#dvds">DVD's</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <span class="mr-3">Hello <?php echo $userRow['email']; ?></span>
-      <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php?logout">Sign Out</a>
-    </form>
+    <ul class="form-inline my-2 my-lg-0">
+      <span class="mr-5">Hello <?php echo $userRow['user_name']; ?></span>
+      <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php?logout"><i class="fas fa-sign-out-alt">&nbsp;</i>Log Out</a>
+    </ul>
   </div>
 </nav>
 
 <?php
-
 $q_books = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'book'";
 
 $r_books = $conn->query($q_books);//$result = mysqli_query($conn,$sql)
@@ -58,7 +55,7 @@ $output = "";
 $rows_books = $r_books->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
-	<h1><a name=\"books\">Book Info</h1>
+	<h1 class = \"mt-5\"><a name=\"books\">Book Info</h1>
 	<table class='table table-striped'>
 		<thead>
 			<tr>
@@ -104,7 +101,7 @@ $output = "";
 $rows_cds = $r_cds->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
-	<h1><a name=\"cds\">CD Info</h1>
+	<h1 class = \"mt-5\"><a name=\"cds\">CD Info</h1>
 	<table class='table table-striped'>
 		<thead>
 			<tr>
@@ -149,7 +146,7 @@ $output = "";
 $rows_dvds = $r_dvds->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
-	<h1><a name=\"dvds\">DVD Info</h1>
+	<h1 class = \"mt-5\"><a name=\"dvds\">DVD Info</h1>
 	<table class='table table-striped'>
 		<thead>
 			<tr>

@@ -1,6 +1,7 @@
 /*																							*
 *					*					home.php					*						*/
 
+				/* site background */
 .content {
 	background-color: #bcd2ee;
 }
@@ -10,3 +11,4 @@
 	white-space: nowrap;
 	font-weight: bold;
 }
+
