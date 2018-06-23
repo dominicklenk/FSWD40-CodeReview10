@@ -46,7 +46,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 <?php
 $q_books = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'book'";
 
-$r_books = $conn->query($q_books);//$result = mysqli_query($conn,$sql)
+$r_books = $conn->query($q_books);
 if (!$r_books) {
 	echo "query failed!";
 	} 
@@ -92,7 +92,7 @@ echo "<hr>";
 
 $q_cds = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'cd'";
 
-$r_cds = $conn->query($q_cds);//$result = mysqli_query($conn,$sql)
+$r_cds = $conn->query($q_cds);
 if (!$r_cds) {
 	echo "query failed!";
 	} 
@@ -135,9 +135,9 @@ echo "<hr>";
 
 <?php
 
-$q_dvds = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'cd'";
+$q_dvds = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'dvd'";
 
-$r_dvds = $conn->query($q_dvds);//$result = mysqli_query($conn,$sql)
+$r_dvds = $conn->query($q_dvds);
 if (!$r_dvds) {
 	echo "query failed!";
 	} 
