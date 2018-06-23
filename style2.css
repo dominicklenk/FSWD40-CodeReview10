@@ -1,0 +1,12 @@
+/*																							*
+*					*					home.php					*						*/
+
+.content {
+	background-color: #bcd2ee;
+}
+
+				/* table */
+.no-wrap {
+	white-space: nowrap;
+	font-weight: bold;
+}

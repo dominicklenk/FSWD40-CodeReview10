@@ -59,33 +59,33 @@ if( $count == 1 && $row['password']==$password ) {
   }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Login & Registration System</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-            <h2>Sign In.</h2>
-            <hr />
-            
+<body class="text-center entrance">
+<div class="container">
+<form class="form-signin" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+<h1 class="mb-4 font-weight-bold welcome">Welcome to the BigLibrary! </h1>          
            <?php
   if ( isset($errMSG) ) {
 echo $errMSG; ?>
-              
+      
                <?php
   }
   ?>
-<input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
+
+<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" required autofocus/>
 <span class="text-danger"><?php echo $emailError; ?></span>
-<input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" /> 
+<input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Your Password" maxlength="15" required/> 
 <span class="text-danger"><?php echo $passError; ?></span>
-<hr />
-<button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>    
-<hr />
-            <a href="register.php">Sign Up Here...</a>
+<button type="submit" class="btn btn-lg btn-primary btn-block" name="btn-login">Log In</button>
+<h3 class="mt-3">OR</h3>
+            <a class="sign font-weight-bold" href="register.php">Sign Up Here...</a>
 </form>
-</div>
+
 </div>
 </body>
 </html>

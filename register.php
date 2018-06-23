@@ -128,16 +128,15 @@ if(!$error) {
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Login & Registration System</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="text-center entrance">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-
-            <h2>Sign Up.</h2>
-            <hr />
+<h1 class = "mb-4 font-weight-bold welcome">Sign Up.</h1>
           
            <?php
   if ( isset($errMSG) ) {
@@ -165,31 +164,6 @@ if(!$error) {
 <hr />
         <a href="index.php">Sign in Here...</a>
 </form>
-
-<!--
-<div class="container">
-        <div class="card card-container">
-             <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" />
-            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            </form> /form
-
-            <a href="#" class="forgot-password">
-                Forgot the password?
-            </a>
-        </div> /card-container
-    </div> /container 
--->
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 23, 2018 at 12:16 AM
+-- Generation Time: Jun 23, 2018 at 02:55 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -41,7 +41,12 @@ INSERT INTO `author` (`author_id`, `first_name`, `last_name`) VALUES
 (8, 'Namika', ''),
 (9, 'Snow Patrol', ''),
 (10, 'George Ezra', ''),
-(11, 'Imagine Dragons', '');
+(11, 'Imagine Dragons', ''),
+(12, 'Christopher Nolan', ''),
+(13, 'Lana Wachowski', ''),
+(14, 'Miguel Arteta', ''),
+(15, 'Andrew Stanton, Lee Unkrich', ''),
+(16, 'Olivier Nakache, Éric Toledano', '');
 
 -- --------------------------------------------------------
 
@@ -71,15 +76,20 @@ CREATE TABLE `media` (
 INSERT INTO `media` (`media_id`, `ISBN_code`, `media_title`, `media_img`, `media_type`, `media_genre`, `publish_date`, `description`, `status`, `fk_publisher_id`, `fk_author_id`, `fk_user_id`) VALUES
 (8, '9780141199702', 'A Tale of Two Cities', 'http://prodimage.images-bn.com/pimages/9781593081386_p0_v3_s1200x630.jpg', 'book', 'roman', '1859-11-15', 'Described by Dickens as ´the best story I have written.', 'available', 1, 1, NULL),
 (9, '9780099469698', 'Don Quixote', 'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/0994/9780099469698.jpg', 'book', 'roman', '2005-01-06', 'The world\'s first modern novel, and one of the funniest and most tragic books ever written. Don Quixote and his faithful squire, Sancho Panza, as they travel through sixteenth-century Spain. Unless you read Spanish, you\'ve never read Don Quixote.', 'available', 2, 2, NULL),
-(10, '9781444707861', 'It', 'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4447/9781444707861.jpg', 'book', 'thriller', '2011-07-26', '\'They float...and when you\'re down here with me, you\'ll float, too.\'\r\nDerry, Maine is just an ordinary town: familiar, well-ordered for the most part, a good place to live.', 'reserved', 3, 3, NULL),
+(10, '9781444707861', 'It', 'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4447/9781444707861.jpg', 'book', 'thriller', '2011-07-26', '\'They float...and when you\'re down here with me, you\'ll float, too.\'\r\nDerry, Maine is just an ordinary town: familiar, well-ordered for the most part, a good place to live.', 'reserved', 3, 3, 6),
 (11, '9780345816023', '12 Rules for Life', 'https://media.buch.de/img-adb/61669796-00-00.jpg', 'book', 'health', '2018-01-23', 'Humorous, surprising and informative, Dr. Peterson tells us why skateboarding boys and girls must be left alone, what terrible fate awaits those who criticize too easily, and why you should always pet a cat when you meet one on the street.', 'available', 4, 4, NULL),
 (12, '9780718187729', '5 Ingredients - Quick & Easy Food', 'https://media.buch.de/img-adb/54425029-00-00.jpg', 'book', 'cookbook', '2017-08-24', 'One of the Guardian\'s TOP TEN READS for Christmas Featuring ALL the simple and delicious recipes from Jamie\'s CHANNEL 4 series - Quick and Easy Food . . . ', 'available', 5, 5, NULL),
 (13, '0887828031702', 'AM (Jewel Case)', 'https://media.buch.de/img-adb/36346443-00-00.jpg', 'cd', 'rock', '2013-09-06', 'The band from Sheffield to singer and guitarist Alex Turner, who has since moved to Los Angeles, has evolved significantly on their fifth studio album.', 'available', 6, 6, NULL),
-(14, '0602557801644', 'Niente', 'https://media.buch.de/img-adb/72412631-00-00.jpg', 'cd', 'german pop', '2017-10-06', 'NIENTE is not quiet, and the whirlpools of still water are often stronger than the roar of the falls. The story is not finished, it finds a new pivot.', 'reserved', 7, 7, NULL),
+(14, '0602557801644', 'Niente', 'https://media.buch.de/img-adb/72412631-00-00.jpg', 'cd', 'german pop', '2017-10-06', 'NIENTE is not quiet, and the whirlpools of still water are often stronger than the roar of the falls. The story is not finished, it finds a new pivot.', 'reserved', 7, 7, 5),
 (15, '0889853720125', 'Que Walou', 'https://media.buch.de/img-adb/110693633-00-00.jpg', 'cd', 'german pop', '2018-06-01', 'That the second album should always be the hardest, you can not hear \"Que Walou\" from Namika. The record released today also tells about heavy topics in a feathery tone.', 'available', 8, 8, NULL),
 (16, '0602567399483', 'Wildness', 'https://media.buch.de/img-adb/105013765-00-00.jpg', 'cd', 'rock', '2018-05-25', 'Ever since the TV series Grays Anatomy repeatedly with \"Chasing Cars\", \"Open Your Eyes\" or \"Make This Go On Forever\" episodes underpinned, the tracks of Gary Lightbody and Co. regularly conquered the top of the charts worldwide.', 'available', 7, 9, NULL),
-(17, '0889854597825', 'Staying at Tamara\'s', 'https://media.buch.de/img-adb/96405889-00-00.jpg', 'cd', 'pop', '2018-03-23', 'Born in 1993, the Hertfordshire musician has taken his time with a successor to his worldwide hit debut album \"Wanted On Voyage\", which was also a hit with the hit \"Budapest\".', 'reserved', 8, 10, NULL),
-(18, '0602557680867', 'Evolve', 'https://media.buch.de/img-adb/65256892-00-00.jpg', 'cd', 'rock', '2017-06-23', 'In 2014, the Imagine Dragons emerged from nowhere and immediately hit the nerve of the zeitgeist. Four years later, the Grammy winners are now in the starting blocks with their third album Evolve.', 'available', 7, 11, NULL);
+(17, '0889854597825', 'Staying at Tamara\'s', 'https://media.buch.de/img-adb/96405889-00-00.jpg', 'cd', 'pop', '2018-03-23', 'Born in 1993, the Hertfordshire musician has taken his time with a successor to his worldwide hit debut album \"Wanted On Voyage\", which was also a hit with the hit \"Budapest\".', 'reserved', 8, 10, 5),
+(18, '0602557680867', 'Evolve', 'https://media.buch.de/img-adb/65256892-00-00.jpg', 'cd', 'rock', '2017-06-23', 'In 2014, the Imagine Dragons emerged from nowhere and immediately hit the nerve of the zeitgeist. Four years later, the Grammy winners are now in the starting blocks with their third album Evolve.', 'available', 7, 11, NULL),
+(19, '9780141199599', 'Inception', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg', 'dvd', 'action, sci-fi', '2010-07-30', 'Inception is a movie starring Leonardo DiCaprio, Joseph Gordon-Levitt, and Ellen Page. A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.', 'available', 9, 12, NULL),
+(20, '9780141199699', 'The Matrix', 'https://images-na.ssl-images-amazon.com/images/I/51EG732BV3L._SY445_.jpg', 'dvd', 'action, sci-fi', '1999-03-31', 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', 'available', 9, 13, NULL),
+(21, '9780141199601', 'Youth in Revolt', 'https://m.media-amazon.com/images/M/MV5BMjE3NTkxODUwOV5BMl5BanBnXkFtZTcwMjE4NjI5Mg@@._V1_UX182_CR0,0,182,268_AL_.jpg', 'dvd', 'comedy, drama', '2010-01-08', 'While camping in Ukiah, Nick meets Sheeni: for him, it\'s love at first sight.', 'reserved', 10, 14, 7),
+(22, '9781444707603', 'Finding Nemo', 'https://m.media-amazon.com/images/M/MV5BZjMxYzBiNjUtZDliNC00MDAyLTg3N2QtOWNjNmNhZGQzNDg5XkEyXkFqcGdeQXVyNjE2MjQwNjc@._V1_UY268_CR1,0,182,268_AL_.jpg', 'dvd', 'animation, adventure, comedy', '2003-11-20', 'After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.', 'available', 11, 15, NULL),
+(23, '9780141199604', 'The Intouchables', 'https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg', 'dvd', 'biography, comedy, drama', '2011-11-02', 'After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.', 'available', 12, 16, NULL);
 
 -- --------------------------------------------------------
 
@@ -106,7 +116,11 @@ INSERT INTO `publisher` (`publisher_id`, `publisher_name`, `publisher_address`, 
 (5, 'Penguin Books Ltd', 'London, UK', 'big'),
 (6, 'GoodToGo GmbH', 'Mathias-Brüggen-Str. 85, Germany', 'medium'),
 (7, 'Universal Music - A Division of Universal Music GmbH', 'Schwarzenbergpl. 2, 1010 Wien', 'medium'),
-(8, 'Sony Music Entertainment', 'New York City, New York', 'big');
+(8, 'Sony Music Entertainment', 'New York City, New York', 'big'),
+(9, 'Warner Bros', 'USA', 'big'),
+(10, 'Dimension Films', 'USA', 'big'),
+(11, 'Pixar Animation Studios, Walt Disney Pictures', 'USA', 'big'),
+(12, 'Quad Productions, Ten Films, Canal+', 'France', 'medium');
 
 -- --------------------------------------------------------
 
@@ -172,19 +186,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `media_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `media_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `publisher`
 --
 ALTER TABLE `publisher`
-  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user`
