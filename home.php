@@ -43,6 +43,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
   </div>
 </nav>
 
+          <!--           ANOTHER WAY:  ONE SELECT   AND ADD     3 CONDITIONS (if 3 times)           -->
 <?php
 $q_books = "SELECT ISBN_code, media_title, media_img, media_type, media_genre, publish_date, description, status FROM media WHERE media_type = 'book'";
 
@@ -56,7 +57,7 @@ $rows_books = $r_books->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
 	<h1 class = \"mt-5\"><a name=\"books\">Book Info</h1>
-	<table class='table table-striped'>
+	<table class='table table-striped table-responsive'>
 		<thead>
 			<tr>
 				<th>ISBN / genre</th>
@@ -102,7 +103,7 @@ $rows_cds = $r_cds->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
 	<h1 class = \"mt-5\"><a name=\"cds\">CD Info</h1>
-	<table class='table table-striped'>
+	<table class='table table-striped table-responsive'>
 		<thead>
 			<tr>
 				<th>ISBN / genre</th>
@@ -147,7 +148,7 @@ $rows_dvds = $r_dvds->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
 	<h1 class = \"mt-5\"><a name=\"dvds\">DVD Info</h1>
-	<table class='table table-striped'>
+	<table class='table table-striped table-responsive'>
 		<thead>
 			<tr>
 				<th>ISBN / genre</th>
